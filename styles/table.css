@@ -1,0 +1,41 @@
+/* Responsive table - 4 cols equal height */
+.t-row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4em 15px 6em 15px;
+}
+.t-col {
+  display: table-cell;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-top: 4px solid #35562d;
+  border-radius: 8px;
+  padding: 10px;
+  width : 23%;
+  text-align: center;
+  background: #fff;
+  }
+
+
+.colspc {
+		display: table-cell;
+    width : 2.666666%;
+}
+
+/* Media queries */
+   @media screen and (max-width: 768px) {
+  
+		/* Responsive table */
+		.t-row {
+				display: block;
+		}
+		
+		.t-col {
+				display: block;
+				width: 100%;
+		}
+	  /* End responsive table */
+   
+ }

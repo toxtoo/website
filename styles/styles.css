@@ -1,0 +1,286 @@
+/* Minimal CSS Reset */
+* { margin: 0; padding: 0; box-sizing: border-box;-moz-box-sizing: border-box; } 
+html { overflow-y: scroll; } 
+body { background: #ccc; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.6; letter-spacing: 0.1em; }
+h1 {margin-bottom: 0.25em; line-height: 1.1; } 
+h2 {margin-bottom: 0.75em; line-height: 1.2; } 
+h3, h4 { margin-bottom: 0.5em; } 
+p { margin: 0 0 1em; } 
+img { max-width: 100%; height: auto; }
+/* End reset */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #000;
+    background: #f0eee8;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* To change footer height there are
+    3 declarations that need changing */
+    margin-bottom: -100px; /* Footer height, 1 of 3  */
+}
+
+
+/* =========================
+   Simple 4 col grid v1.1
+========================= */
+
+.row:after { display: table; clear: both; content: ""; } 
+.row { width: 100%; margin-bottom: 1.6%; } 
+.col { float: left; margin-left: 1.6%;}
+.col:first-child { margin-left: 0; } 
+.row:last-child { margin-bottom: 0; } 
+
+/* ========== Column widths ========== */ 
+.col.full { width: 100%; } 
+.col.half { width: 49.2%; } 
+.col.one-third { width: 32.266%; } 
+.col.two-thirds { width: 66.066%; } 
+.col.one-fourth { width: 23.8%; } 
+.col.three-fourths { width: 74.6%; }
+
+	/* Media queries */
+   @media screen and (max-width: 768px) {
+ 		.col.full, 
+		.col.half, 
+		.col.one-third, 
+		.col.two-thirds,
+		.col.one-fourth, 
+		.col.three-fourths 
+		{ width: 100%; margin-left: 0; margin-bottom: 1.6%; }
+  
+		.row:last-child  
+		{ margin-bottom: 0; }
+} 
+/* ==== End of 4 col grid ==== */
+
+/* ==== Nav ==== */
+.site-nav {
+    width: 100%;
+    background: #35562d;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-toggle {
+    display: none;
+    width: 100%;
+    padding: 12px 18px;
+    border: 0;
+    background: #35562d;
+    color: #fff;
+    font: inherit;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background: #acbfa4;
+    color: #000;
+}
+
+.menu-toggle.menu-active {
+    background: #35562d;
+    color: #fff;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 18px;
+    background: #35562d;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background: #acbfa4;
+    color: #000;
+}
+
+.menu a.active {
+    background: #acbfa4;
+    color: #000;
+}
+
+/* ==== headers ==== */
+.home-bg {
+    background-image: url(../img/headers/header-1.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.news-bg {
+    background-image: url(../img/headers/header-5.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.gallery-bg {
+    background-image: url(../img/headers/header-9.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.links-bg {
+    background-image: url(../img/headers/header-12.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.about-bg {
+    background-image: url(../img/headers/header-11.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.contact-bg {
+    background-image: url(../img/headers/header-2.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    width: 344px;
+    height: 340px;
+    margin-left: -172px;
+}
+
+.logo img {
+    display: block;
+    width: 344px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .js .menu-toggle {display: block;}
+		.js .menu {display: none;}
+    .js .menu.menu-open {display: block;}
+    .menu li {display: block;}
+    .menu a {border-top: 1px solid rgba(255,255,255,0.2);}
+    
+    .home-bg, .news-bg, .gallery-bg, .links-bg, .about-bg, .contact-bg  {height: 250px;}
+    
+    .logo {
+    top: 40px;
+    width: 172px;
+    height: 170px;
+    margin-left: -86px;
+    }
+    
+    .logo img {
+        width: 172px;
+    }
+}
+/* ==== End media queries ==== */
+
+
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+.content {
+    width: 96%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5em 0 3em;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.home {text-align: center;}
+
+/* ==== info bar ==== */
+.info {
+		border-radius: 8px;
+		text-align: left;
+		background: #2d4a27;
+		padding: 1em 1em;
+		color: #fff;
+		/* margin-top: 5em; */
+}
+
+    .info h3 {
+      color: #c5a059;
+      margin-top: 0;
+    }
+    
+   
+ 
+.btn {
+      display: inline-block;
+      background-color: #c5a059;
+      color: #2d4a27;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-top: 1rem;
+      transition: background 0.2s ease;
+    }
+.btn:hover {
+      background-color: #d8b268;
+    }
+/* ==== /info bar ==== */
+
+.push {
+    height: 100px; /* Footer height, 2 of 3 */
+}
+
+footer {
+    height: 100px; /* Footer height, 3 of 3 */
+    line-height: 50px;
+    padding: 1.5em;
+    background: #2d4a27;
+    color: #fff;
+    text-align: center;
+}
+
